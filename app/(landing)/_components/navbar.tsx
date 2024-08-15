@@ -7,8 +7,10 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from '@/components/ui/navigation-menu';
-import { Logo } from '@/components/logo';
+
+
 import { Button } from '@/components/ui/button';
+import { MountainIcon } from 'lucide-react';
 
 const navigation = [
 	{
@@ -38,9 +40,10 @@ export const Navbar = () => {
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<Link href="/" className="flex items-center space-x-2">
-							<Logo />
-							<h2 className="text-2xl font-bold">NPRDR</h2>
+						<MountainIcon className="h-6 w-6" />
+							<h2 className="text-2xl font-bold">NdR Agency</h2>
 						</Link>
+
 					</NavigationMenuItem>
 				</NavigationMenuList>
 				<NavigationMenuList className="flex justify-between items-center font-light space-x-14 text-xs">
@@ -55,6 +58,7 @@ export const Navbar = () => {
 					})}
 				</NavigationMenuList>
 			</NavigationMenu>
+
 		</div>
 	);
 };
