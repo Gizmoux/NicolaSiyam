@@ -15,7 +15,7 @@ const Hero = () => {
 				>
 					<h1 className="font-bold text-6xl leading-tight text-gray-900">
 						Transformez votre vision en
-						<span className="text-[#6841DA]"> réalité digitale</span>
+						<span className="text-blue-700"> réalité digitale</span>
 					</h1>
 					<p className="text-lg text-gray-700 leading-relaxed">
 						Chez NPRDR Agency, nous créons des expériences web innovantes qui
@@ -26,13 +26,13 @@ const Hero = () => {
 					</p>
 					<div className="flex gap-6 pt-4 pb-4">
 						<Button
-							className="bg-[#6841DA] hover:bg-[#5636B8] text-white"
+							className="bg-blue-700 hover:bg-blue-800 text-white"
 							size="lg"
 						>
 							Demandez votre devis
 						</Button>
 						<Button
-							className="bg-[#6841DA] hover:bg-[#5636B8] text-white"
+							className="bg-blue-700 hover:bg-blue-800 text-white"
 							size="lg"
 						>
 							Contactez-nous
