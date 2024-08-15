@@ -75,7 +75,7 @@ const Feature = () => {
 							({ icon, title, description, href, cta }, index) => (
 								<Link
 									href={`${href}`}
-									className="flex flex-col hover:bg-[#6841DA] justify-between gap-6 rounded-lg border p-6 transition-all hover:-mt-2 hover:mb-2"
+									className="flex flex-col hover:bg-blue-800 justify-between gap-6 rounded-lg border p-6 transition-all hover:-mt-2 hover:mb-2"
 									key={index}
 								>
 									<div className="grid gap-4">
