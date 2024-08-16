@@ -14,21 +14,27 @@ import { MountainIcon } from 'lucide-react';
 const navigation = [
 	{
 		item: 'Accueil',
+		id:"#accueil",
 	},
 	{
 		item: 'À propos',
+		id:"#about",
 	},
 	{
 		item: 'Description',
+		id:"#description",
 	},
 	{
 		item: 'Portfolio',
+		id:"#portfolio",
 	},
 	{
 		item: 'Contact',
+		id:"#contact"
 	},
 	{
 		item: 'Prix',
+		id:"#price",
 	},
 ];
 
@@ -47,9 +53,11 @@ export const Navbar = () => {
 				<NavigationMenuList className="flex justify-between items-center font-light space-x-14 text-md">
 					{navigation.map(link => {
 						return (
-							<div key="item">
+							<div key="item"  >
 								<NavigationMenuItem className="hover:underline cursor-pointer">
+									<a href={link.id}>
 									{link.item}
+									</a>
 								</NavigationMenuItem>
 							</div>
 						);
