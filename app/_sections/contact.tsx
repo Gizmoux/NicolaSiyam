@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Contact = () => {
 	return (
-		<section className="bg-blue-50 py-16 px-4 sm:px-6 lg:px-8">
+		<section className="bg-blue-100 py-16 px-4 sm:px-6 lg:px-8" id="contact">
 			<div className="max-w-3xl mx-auto text-center">
 				<h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
 					Contactez NdR Agency
