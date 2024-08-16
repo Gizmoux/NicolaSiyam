@@ -11,8 +11,7 @@ export function Footer() {
 						<span className="text-xl font-bold">NdR Agency</span>
 					</Link>
 					<p className="max-w-[300px] text-sm">
-						NdR is a leading web agency that specializes in creating beautiful
-						and functional websites for businesses of all sizes.
+					NdR est une agence web de premier plan spécialisée dans la création de sites internet à la fois beaux et fonctionnels pour des entreprises de toutes tailles.
 					</p>
 				</div>
 				<div className="grid grid-cols-2 gap-8">
@@ -24,12 +23,8 @@ export function Footer() {
 						<Link href="#" className="text-sm hover:underline" prefetch={false}>
 							Web Development
 						</Link>
-						<Link href="#" className="text-sm hover:underline" prefetch={false}>
-							Digital Marketing
-						</Link>
-						<Link href="#" className="text-sm hover:underline" prefetch={false}>
-							Branding
-						</Link>
+						
+						
 					</div>
 					<div className="grid gap-2">
 						<h4 className="text-sm font-bold uppercase">Company</h4>
@@ -77,6 +72,7 @@ export function Footer() {
 							prefetch={false}
 						>
 							<GitlabIcon className="h-5 w-5" />
+
 						</Link>
 					</div>
 				</div>
