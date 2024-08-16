@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Portfolio = () => {
 	return (
-		<section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+		<section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8" id="portfolio">
 			<div className="max-w-3xl mx-auto text-center">
 				<h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
 					Notre Portfolio
@@ -30,7 +30,8 @@ const Portfolio = () => {
 					</h3>
 					<div className="mt-4">
 						<Link
-							href="/portfolio"
+						target='_blank'
+							href="http://www.gizmoux.fr"
 							className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
 						>
 							Voir notre portfolio
