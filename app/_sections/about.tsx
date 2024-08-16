@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
 	return (
-		<section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+		<section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8" id="about" >
 			<div className="max-w-3xl mx-auto">
 				<h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
 					À propos de NdR Agency
@@ -10,7 +10,7 @@ const About = () => {
 				<div className="space-y-6 text-gray-700">
 					<p className="text-lg">
 						Bienvenue chez NdR Agency, votre partenaire de confiance
-						dans lunivers du développement web. Fondée en [année], notre agence
+						dans lunivers du développement web. Fondée en 2024, notre agence
 						sest donné pour mission de transformer vos idées en expériences
 						numériques exceptionnelles.
 					</p>
