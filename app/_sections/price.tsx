@@ -101,7 +101,7 @@ const PriceSection: React.FC = () => {
 	];
 
 	return (
-		<section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+		<section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-8" id="price">
 			<div className="max-w-7xl mx-auto">
 				<h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
 					Nos Offres
