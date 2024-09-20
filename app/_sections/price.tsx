@@ -76,7 +76,7 @@ const PriceSection: React.FC = () => {
 		},
 		{
 			title: 'Site E-commerce',
-			price: '1499',
+			price: '1299',
 			features: [
 				{ text: "Jusqu'à 100 produits" },
 				{ text: 'Système de paiement sécurisé' },
@@ -88,7 +88,7 @@ const PriceSection: React.FC = () => {
 		},
 		{
 			title: 'Application Web',
-			price: '2599',
+			price: '1999',
 			features: [
 				{ text: 'Fonctionnalités sur mesure' },
 				{ text: 'Intégration API' },
