@@ -43,7 +43,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
-            Créons ensemble <span className="text-gradient-to-r">l'identité digitale</span> de votre entreprise
+            Créons ensemble <span className="title-gradient">l'identité digitale</span> de votre entreprise
           </motion.h1>
           
           <motion.p 

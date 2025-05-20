@@ -95,7 +95,7 @@ const Services = () => {
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants} whileHover="hover">
-              <Card className="overflow-hidden card-hover transition-all duration-500">
+              <Card className="rounded-[32px] overflow-hidden card-hover transition-all duration-500">
                 <div className={`h-2 ${service.accent}`}></div>
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -138,7 +138,7 @@ const Services = () => {
           >
             <Button asChild size="lg" className="bg-pink-light hover:bg-blue-primary text-white transition-colors duration-300">
               <a href="#contact">
-                Demander un devis personnalisé
+                Demander un devis personnalisé [GRATUIT]
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>

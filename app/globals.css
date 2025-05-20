@@ -277,16 +277,9 @@
   }
 }
 
-.text-gradient-to-r {
+.title-gradient {
     background-image: linear-gradient(to right, #FFAFCA, #DEE3FF, #90C9FF);
     -webkit-background-clip: text; /* Pour découper le fond au texte */
     -webkit-text-fill-color: transparent; /* Pour que le texte soit transparent et laisse apparaître le fond */
     color: transparent; /* Fallback pour les navigateurs non compatibles */
-  }
-
-  .title-gradient {
-    background-image: linear-gradient(to right, #FFAFCA, #DEE3FF, #90C9FF);
-    -webkit-background-clip: text; /* Pour découper le fond au texte */
-    -webkit-text-fill-color: transparent; /* Pour que le texte soit transparent et laisse apparaître le fond */
-    color: transparent; /* Fallback pour les navigateurs non compatibles */
-  }
+}

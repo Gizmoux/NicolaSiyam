@@ -15,7 +15,7 @@ const About = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Card className="card-hover border-blue-soft border-2">
+          <Card className="card-hover border-blue-soft border-2 rounded-[32px]">
             <CardContent className="pt-6">
               <div className="flex flex-col items-center text-center">
                 <div className="bg-blue-soft/30 p-3 rounded-full mb-4">
@@ -29,7 +29,7 @@ const About = () => {
             </CardContent>
           </Card>
           
-          <Card className="card-hover border-pink-soft border-2">
+          <Card className="card-hover border-pink-soft border-2 rounded-[32px]">
             <CardContent className="pt-6">
               <div className="flex flex-col items-center text-center">
                 <div className="bg-pink-soft/30 p-3 rounded-full mb-4">
@@ -43,7 +43,7 @@ const About = () => {
             </CardContent>
           </Card>
           
-          <Card className="card-hover border-blue-sky border-2">
+          <Card className="card-hover border-blue-sky border-2 rounded-[32px]">
             <CardContent className="pt-6">
               <div className="flex flex-col items-center text-center">
                 <div className="bg-blue-sky/30 p-3 rounded-full mb-4">
@@ -77,11 +77,11 @@ const About = () => {
                 <span className="text-sm text-gray-600">Années d'expérience</span>
               </div>
               <div className="bg-pink-soft/20 p-6 rounded-lg text-center">
-                <span className="block text-3xl font-bold text-pink-light mb-2">50+</span>
+                <span className="block text-3xl font-bold text-pink-light mb-2">5+</span>
                 <span className="text-sm text-gray-600">Projets réalisés</span>
               </div>
               <div className="bg-blue-sky/20 p-6 rounded-lg text-center">
-                <span className="block text-3xl font-bold text-blue-sky mb-2">30+</span>
+                <span className="block text-3xl font-bold text-blue-sky mb-2">3+</span>
                 <span className="text-sm text-gray-600">Clients satisfaits</span>
               </div>
               <div className="bg-blue-soft/20 p-6 rounded-lg text-center">

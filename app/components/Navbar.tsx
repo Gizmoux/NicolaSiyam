@@ -1,7 +1,7 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,6 +20,36 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const menuVariants = {
+    hidden: { opacity: 0, x: '-100%' },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { 
+        type: "tween", 
+        duration: 0.4, 
+        ease: "easeInOut",
+        when: "beforeChildren",
+        staggerChildren: 0.1
+      }
+    },
+    exit: { 
+      opacity: 0, 
+      x: '-100%',
+      transition: { 
+        type: "tween", 
+        duration: 0.3, 
+        ease: "easeInOut" 
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: -20 }
+  };
+
   return (
     <nav 
       className={cn(
@@ -30,8 +60,8 @@ const Navbar = () => {
       )}
     >
       <div className="container-custom flex justify-between items-center">
-        <a href="#" className="font-playfair font-bold text-xl md:text-2xl">
-          <span className="title-gradient">Website Creaatong</span>
+        <a href="#" className="font-playfair font-bold text-xl md:text-2xl z-50">
+          <span className="title-gradient">NS Studio Web</span>
         </a>
 
         {/* Navigation desktop */}
@@ -47,29 +77,73 @@ const Navbar = () => {
 
         {/* Bouton menu mobile */}
         <button 
-          className="md:hidden flex flex-col space-y-1.5" 
+          className={`md:hidden flex flex-col space-y-1.5 z-50 ${isMobileMenuOpen ? 'relative' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
-          <span className={`block w-6 h-0.5 bg-pink-light transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-          <span className={`block w-6 h-0.5 bg-pink-light transition-opacity ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-          <span className={`block w-6 h-0.5 bg-pink-light transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-pink-light transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2 bg-pink-light ' : ''}`}></span>
+          <span className={`block w-6 h-0.5 bg-pink-light transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+          <span className={`block w-6 h-0.5 bg-pink-light transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2 bg-pink-light ' : ''}`}></span>
         </button>
       </div>
 
-      {/* Menu mobile */}
-      <div className={`md:hidden absolute w-full bg-white shadow-md transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-60' : 'max-h-0'}`}>
-        <div className="container-custom py-4 flex flex-col space-y-3">
-          <a href="#about" className="text-sm py-2 hover:text-pink-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>À propos</a>
-          <a href="#services" className="text-sm py-2 hover:text-pink-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-          <a href="#projects" className="text-sm py-2 hover:text-pink-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Projets</a>
-          <a href="#testimonials" className="text-sm py-2 hover:text-pink-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Témoignages</a>
-          <a href="#contact" className="text-sm py-2 hover:text-pink-light transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
-        </div>
-      </div>
+      {/* Menu mobile plein écran avec animation */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div 
+            className="fixed inset-0 bg-white/80 backdrop-blur-md z-40 flex items-center justify-center"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={menuVariants}
+          >
+            <div className="flex flex-col items-center space-y-6 text-[#90C9FF]">
+              <motion.a 
+                href="#about" 
+                className="text-xl font-medium py-2 hover:scale-110 transition-transform" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                variants={itemVariants}
+              >
+                À propos
+              </motion.a>
+              <motion.a 
+                href="#services" 
+                className="text-xl font-medium py-2 hover:scale-110 transition-transform" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                variants={itemVariants}
+              >
+                Services
+              </motion.a>
+              <motion.a 
+                href="#projects" 
+                className="text-xl font-medium py-2 hover:scale-110 transition-transform" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                variants={itemVariants}
+              >
+                Projets
+              </motion.a>
+              <motion.a 
+                href="#testimonials" 
+                className="text-xl font-medium py-2 hover:scale-110 transition-transform" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                variants={itemVariants}
+              >
+                Témoignages
+              </motion.a>
+              <motion.a 
+                href="#contact" 
+                className="mt-4 px-8 py-3 bg-white text-pink-light rounded-full text-lg font-medium hover:scale-110 transition-transform" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                variants={itemVariants}
+              >
+                Contact
+              </motion.a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
-
 
 export default Navbar;

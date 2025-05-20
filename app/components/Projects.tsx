@@ -13,31 +13,31 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Arimayi - Site Vitrine",
+      title: "AriMayi - Site Vitrine",
       category: "Site Vitrine",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80",
-      description: "Site vitrine élégant pour la société Arimayi, mettant en avant leurs services et valeurs avec un design épuré et moderne.",
+      description: "Site vitrine élégant pour la société AriMayi, mettant en avant leurs services et valeurs avec un design épuré et moderne.",
       technologies: ["React", "Tailwind CSS", "Responsive Design", "Animations"],
-      link: "#"
+      link: "https://arimayi.fr"
     },
-    {
-      id: 2,
-      title: "EcoShop",
-      category: "E-commerce",
-      image: "https://images.unsplash.com/photo-1531973576343-80db7389f987?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      description: "Boutique en ligne pour une marque de produits écologiques avec système de paiement et gestion des commandes.",
-      technologies: ["Next.js", "Stripe", "CMS Headless", "Responsive Design"],
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "CityView",
-      category: "Application Web",
-      image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2144&q=80",
-      description: "Application interactive pour explorer les points d'intérêt dans différentes villes avec système de géolocalisation.",
-      technologies: ["React", "Google Maps API", "Node.js", "Mobile First"],
-      link: "#"
-    },
+    // {
+    //   id: 2,
+    //   title: "EcoShop",
+    //   category: "E-commerce",
+    //   image: "https://images.unsplash.com/photo-1531973576343-80db7389f987?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    //   description: "Boutique en ligne pour une marque de produits écologiques avec système de paiement et gestion des commandes.",
+    //   technologies: ["Next.js", "Stripe", "CMS Headless", "Responsive Design"],
+    //   link: "#"
+    // },
+    // {
+    //   id: 3,
+    //   title: "CityView",
+    //   category: "Application Web",
+    //   image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2144&q=80",
+    //   description: "Application interactive pour explorer les points d'intérêt dans différentes villes avec système de géolocalisation.",
+    //   technologies: ["React", "Google Maps API", "Node.js", "Mobile First"],
+    //   link: "#"
+    // },
     {
       id: 4,
       title: "ArtFolio",
@@ -95,10 +95,10 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 title-gradient">Mes Réalisations</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 title-gradient">Nos Réalisations</h2>
           <p className="text-lg text-gray-600">
-            Découvrez quelques-uns des projets sur lesquels j'ai travaillé, 
-            illustrant mon approche du design et du développement web.
+            Découvrez quelques-uns des projets sur lesquels nous avons travaillé, 
+            illustrant notre approche du design et du développement web.
           </p>
         </motion.div>
 
@@ -116,7 +116,7 @@ const Projects = () => {
               whileHover="hover"
               onClick={() => openProjectDetails(project)}
             >
-              <Card className="overflow-hidden cursor-pointer">
+              <Card className="overflow-hidden cursor-pointer rounded-[32px]">
                 <div className="relative h-60 overflow-hidden rounded-t-card">
                   <motion.img
                     src={project.image}
