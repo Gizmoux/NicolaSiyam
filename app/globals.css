@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,3 +69,224 @@
     @apply bg-background text-foreground;
   }
 }
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
+
+* {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .title-gradient {
+    @apply inline-block bg-gradient-to-r from-pink-light via-blue-soft to-blue-primary bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-pink-light text-white rounded-md hover:bg-blue-primary transition-colors duration-300;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border border-pink-light text-pink-light rounded-md hover:bg-pink-light hover:text-white transition-colors duration-300;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-lg hover:-translate-y-2 rounded-card hover:shadow-pink-light/20;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animate-scale {
+    animation: scale 0.5s ease-out forwards;
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-reveal {
+    animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .stagger-animation > * {
+    opacity: 0;
+  }
+
+  .stagger-animation > *:nth-child(1) { animation: fadeUp 0.6s 0.1s forwards; }
+  .stagger-animation > *:nth-child(2) { animation: fadeUp 0.6s 0.2s forwards; }
+  .stagger-animation > *:nth-child(3) { animation: fadeUp 0.6s 0.3s forwards; }
+  .stagger-animation > *:nth-child(4) { animation: fadeUp 0.6s 0.4s forwards; }
+  .stagger-animation > *:nth-child(5) { animation: fadeUp 0.6s 0.5s forwards; }
+  .stagger-animation > *:nth-child(6) { animation: fadeUp 0.6s 0.6s forwards; }
+  
+  .scroll-reveal {
+    opacity: 0;
+    transition: all 1s;
+  }
+  
+  .scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scroll-reveal:not(.active) {
+    transform: translateY(20px);
+  }
+}
+
+.text-gradient-to-r {
+    background-image: linear-gradient(to right, #FFAFCA, #DEE3FF, #90C9FF);
+    -webkit-background-clip: text; /* Pour découper le fond au texte */
+    -webkit-text-fill-color: transparent; /* Pour que le texte soit transparent et laisse apparaître le fond */
+    color: transparent; /* Fallback pour les navigateurs non compatibles */
+  }
+
+  .title-gradient {
+    background-image: linear-gradient(to right, #FFAFCA, #DEE3FF, #90C9FF);
+    -webkit-background-clip: text; /* Pour découper le fond au texte */
+    -webkit-text-fill-color: transparent; /* Pour que le texte soit transparent et laisse apparaître le fond */
+    color: transparent; /* Fallback pour les navigateurs non compatibles */
+  }
