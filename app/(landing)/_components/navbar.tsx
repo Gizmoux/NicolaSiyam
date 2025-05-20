@@ -7,9 +7,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MountainIcon } from "lucide-react";
+import { Logo } from "@/components/logo";
 
 const navigation = [
   {
@@ -45,7 +46,8 @@ export const Navbar = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" className="flex items-center space-x-2">
-              <MountainIcon className="h-6 w-6" />
+              {/* <MountainIcon className="h-6 w-6" /> */}
+              <Logo />
               <h2 className="text-2xl font-bold">NicolaSiyam Agency</h2>
             </Link>
           </NavigationMenuItem>

@@ -9,25 +9,35 @@ const About = () => {
         </h2>
         <div className="space-y-6 text-gray-700">
           <p className="text-lg">
-            Bienvenue chez NicolaSiyam Agency, votre partenaire de confiance
-            dans lunivers du développement web. Fondée en 2024, notre agence
-            sest donné pour mission de transformer vos idées en expériences
-            numériques exceptionnelles.
+            Bienvenue chez NicolaSiyam Agency, une aventure portée par deux
+            passionnés de développement web : Siyam et Nicolas.
           </p>
           <p className="text-lg">
-            Spécialisés dans les technologies de pointe comme Next.js, nous
-            combinons créativité et expertise technique pour concevoir des sites
-            web et des applications qui se démarquent. Notre équipe passionnée
-            sengage à offrir des solutions sur mesure, performantes et
-            esthétiquement attrayantes, qui répondent parfaitement aux besoins
-            uniques de chaque client.
+            Nous avons fondé cette agence en 2024 avec une conviction simple :
+            le web est un terrain de jeu infini pour l&apos;innovation et la
+            création, à condition d&apos;y mettre du cœur et de la rigueur.
+            Siyam, diplômé d&apos;Epitech, apporte à l&apos;agence une solide
+            expertise technique acquise au fil d&apos;un parcours exigeant. Son
+            regard structuré, son expérience en développement logiciel et sa
+            capacité à penser les projets dans leur globalité sont des atouts
+            majeurs pour garantir des solutions robustes et pérennes. Nicolas,
+            développeur autodidacte passionné, a affûté ses compétences à
+            travers des projets concrets, une veille constante, et une volonté
+            farouche d’apprendre. Son approche terrain, orientée résultats et
+            centrée sur l’utilisateur, complète parfaitement la vision technique
+            de Siyam.
           </p>
           <p className="text-lg">
-            Chez NicolaSiyam Agency, nous croyons que chaque projet est une
-            opportunité de repousser les limites de linnovation. Que vous soyez
-            une start-up ambitieuse ou une entreprise établie, nous sommes là
-            pour donner vie à votre vision et propulser votre présence en ligne
-            vers de nouveaux sommets.
+            Chez NicolaSiyam Agency, nous mettons notre complémentarité au
+            service de la création de sites web et d’applications modernes,
+            performants et sur mesure. Que vous soyez une start-up en quête
+            d’une première vitrine digitale, une PME souhaitant refondre son
+            site, ou une grande entreprise avec des besoins plus complexes, nous
+            vous accompagnons avec implication, transparence et créativité.
+            Spécialisés dans des technologies de pointe comme Next.js, nous
+            concevons chaque projet comme une expérience unique, avec un seul
+            objectif : donner vie à vos idées et sublimer votre présence en
+            ligne.
           </p>
         </div>
       </div>
