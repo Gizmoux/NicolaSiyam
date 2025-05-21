@@ -20,35 +20,62 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Update the menu animation to ensure proper rendering
   const menuVariants = {
-    hidden: { opacity: 0, x: '-100%' },
+    hidden: { opacity: 0 },
     visible: { 
-      opacity: 1, 
-      x: 0,
+      opacity: 1,
       transition: { 
-        type: "tween", 
-        duration: 0.4, 
-        ease: "easeInOut",
+        duration: 0.3,
+        ease: "easeOut",
         when: "beforeChildren",
         staggerChildren: 0.1
       }
     },
     exit: { 
-      opacity: 0, 
-      x: '-100%',
+      opacity: 0,
       transition: { 
-        type: "tween", 
-        duration: 0.3, 
-        ease: "easeInOut" 
+        duration: 0.2,
+        ease: "easeIn",
+        when: "afterChildren",
+        staggerChildren: 0.05,
+        staggerDirection: -1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -20 }
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    },
+    exit: { 
+      opacity: 0, 
+      y: 10,
+      transition: {
+        duration: 0.2,
+        ease: "easeIn"
+      }
+    }
   };
+
+  useEffect(() => {
+    // Prevent body scroll when menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <nav 
@@ -61,7 +88,7 @@ const Navbar = () => {
     >
       <div className="container-custom flex justify-between items-center">
         <a href="#" className="font-playfair font-bold text-xl md:text-2xl z-50">
-          <span className="title-gradient">NS Studio Web</span>
+          <span className="title-gradient">Studio Web</span>
         </a>
 
         {/* Navigation desktop */}
@@ -77,13 +104,13 @@ const Navbar = () => {
 
         {/* Bouton menu mobile */}
         <button 
-          className={`md:hidden flex flex-col space-y-1.5 z-50 ${isMobileMenuOpen ? 'relative' : ''}`}
+          className={`md:hidden flex flex-col space-y-1.5 z-[100] ${isMobileMenuOpen ? 'relative' : ''}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Menu"
         >
-          <span className={`block w-6 h-0.5 bg-pink-light transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2 bg-pink-light ' : ''}`}></span>
+          <span className={`block w-6 h-0.5 transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2 bg-pink-light' : 'bg-pink-light'}`}></span>
           <span className={`block w-6 h-0.5 bg-pink-light transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-          <span className={`block w-6 h-0.5 bg-pink-light transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2 bg-pink-light ' : ''}`}></span>
+          <span className={`block w-6 h-0.5 transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2 bg-pink-light' : 'bg-pink-light'}`}></span>
         </button>
       </div>
 
@@ -91,13 +118,13 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div 
-            className="fixed inset-0 bg-white/80 backdrop-blur-md z-40 flex items-center justify-center"
+            className="fixed inset-0 bg-gradient-to-br from-pink-light via-blue-soft to-blue-primary z-[90] flex items-center justify-center"
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={menuVariants}
           >
-            <div className="flex flex-col items-center space-y-6 text-[#90C9FF]">
+            <div className="flex flex-col items-center space-y-6 text-white">
               <motion.a 
                 href="#about" 
                 className="text-xl font-medium py-2 hover:scale-110 transition-transform" 
@@ -145,5 +172,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
