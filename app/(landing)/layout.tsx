@@ -1,17 +1,17 @@
-import React from 'react';
-import { BackgroundImage } from './_components/background-image';
-import { Navbar } from './_components/navbar';
+import React from "react";
+import { BackgroundImage } from "./_components/background-image";
+import { Navbar } from "./_components/navbar";
 interface LandingLayoutProps {
-	children: React.ReactNode;
+  children: React.ReactNode;
 }
 const LandingLayout = ({ children }: LandingLayoutProps) => {
-	return (
-		<>
-			<BackgroundImage />
-			<Navbar />
-			{children}
-		</>
-	);
+  return (
+    <>
+      <BackgroundImage />
+      <Navbar />
+      {children}
+    </>
+  );
 };
 
 export default LandingLayout;

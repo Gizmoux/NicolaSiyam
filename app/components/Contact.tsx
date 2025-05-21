@@ -14,21 +14,19 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Mail, Phone } from "lucide-react";
-import { useToast } from "../hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Simulation d'envoi de formulaire
-    toast({
-      title: "Message envoyé !",
-      description:
-        "Merci pour votre message. Nous vous répondrons  dans les plus brefs délais.",
-    });
-  };
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   // Simulation d'envoi de formulaire
+  //   toast({
+  //     title: "Message envoyé !",
+  //     description:
+  //       "Merci pour votre message. Nous vous répondrons  dans les plus brefs délais.",
+  //   });
+  // };
 
   return (
     <section
@@ -59,7 +57,7 @@ const Contact = () => {
           >
             <Card className="shadow-lg">
               <CardContent className="pt-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label htmlFor="name" className="text-sm font-medium">
@@ -163,11 +161,11 @@ const Contact = () => {
                       <Button
                         onClick={() => {
                           setIsOpen(false);
-                          toast({
-                            title: "Rendez-vous confirmé !",
-                            description:
-                              "Nous vous contacterons prochainement pour confirmer l'horaire.",
-                          });
+                          // toast({
+                          //   title: "Rendez-vous confirmé !",
+                          //   description:
+                          //     "Nous vous contacterons prochainement pour confirmer l'horaire.",
+                          // });
                         }}
                       >
                         Confirmer le rendez-vous
