@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -20,7 +21,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Update the menu animation to ensure proper rendering
+  // Settings animation menu
   const menuVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -45,27 +46,26 @@ const Navbar = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, x: -30 },
     visible: {
       opacity: 1,
-      y: 0,
+      x: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeOut",
       },
     },
     exit: {
       opacity: 0,
-      y: 10,
+      x: -20,
       transition: {
-        duration: 0.2,
+        duration: 0.3,
         ease: "easeIn",
       },
     },
   };
 
   useEffect(() => {
-    // Prevent body scroll when menu is open
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -89,9 +89,13 @@ const Navbar = () => {
       <div className="container-custom flex justify-between items-center">
         <a
           href="#"
-          className="font-playfair font-bold text-xl md:text-2xl z-50"
+          className="font-playfair font-bold text-xl md:text-2xl z-[101]"
         >
-          <span className="title-gradient">Studio Web</span>
+          {isMobileMenuOpen ? (
+            <span className="text-white">NS Studio Web</span>
+          ) : (
+            <span className="title-gradient">NS Studio Web</span>
+          )}
         </a>
 
         {/* Navigation desktop */}
@@ -162,11 +166,20 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-gradient-to-br from-pink-light via-blue-soft to-blue-primary z-[90] flex items-center justify-center"
+            className="fixed inset-0 bg-gradient-to-br from-pink-light via-blue-soft to-blue-primary z-[99] flex items-center justify-center w-full h-screen"
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={menuVariants}
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              width: '100vw',
+              height: '100vh'
+            }}
           >
             <div className="flex flex-col items-center space-y-6 text-white">
               <motion.a
