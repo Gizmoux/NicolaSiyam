@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
-import React from 'react';
+import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 
 const Testimonials = () => {
@@ -10,36 +11,48 @@ const Testimonials = () => {
       id: 1,
       name: "AriMayi",
       role: "Organisme de formation",
-      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
-      quote: "Un travail exceptionnel pour notre site vitrine. Le design est exactement ce que nous recherchions - élégant, professionnel et représentant parfaitement notre identité. La collaboration a été fluide et agréable du début à la fin.",
-      rating: 5
+      avatar:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
+      quote:
+        "Un travail exceptionnel pour notre site vitrine. Le design est exactement ce que nous recherchions - élégant, professionnel et représentant parfaitement notre identité. La collaboration a été fluide et agréable du début à la fin.",
+      rating: 5,
     },
   ];
 
-  const renderStars = (rating) => {
-    return Array(5).fill(0).map((_, index) => (
-      <Star 
-        key={index} 
-        className={`h-4 w-4 ${index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
-      />
-    ));
+  const renderStars = (rating: number) => {
+    return Array(5)
+      .fill(0)
+      .map((_, index) => (
+        <Star
+          key={index}
+          className={`h-4 w-4 ${
+            index < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
+          }`}
+        />
+      ));
   };
 
   return (
-    <section id="testimonials" className="section bg-gradient-to-br from-blue-light to-pink-soft/30">
+    <section
+      id="testimonials"
+      className="section bg-gradient-to-br from-blue-light to-pink-soft/30"
+    >
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 title-gradient">Ce que disent nos clients</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 title-gradient">
+            Ce que disent nos clients
+          </h2>
           <p className="text-lg text-gray-600">
-            La satisfaction de nos clients est notre priorité absolue. 
-            Voici quelques témoignages de personnes avec qui nous avons eu le plaisir de collaborer.
+            La satisfaction de nos clients est notre priorité absolue. Voici
+            quelques témoignages de personnes avec qui nous avons eu le plaisir
+            de collaborer.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card 
-              key={testimonial.id} 
+            <Card
+              key={testimonial.id}
               className="card-hover border-blue-soft/30 hover:border-pink-light/50 rounded-[32px] transition-all duration-500 animate-fade-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
@@ -55,29 +68,37 @@ const Testimonials = () => {
                     <p className="text-sm text-gray-600">{testimonial.role}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex mb-4">
                   {renderStars(testimonial.rating)}
                 </div>
-                
+
                 <blockquote className="text-gray-600 italic">
-                  "{testimonial.quote}"
+                  {testimonial.quote}
                 </blockquote>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-pink-soft/30 to-blue-soft/30 p-8 rounded-lg animate-fade-up" style={{ animationDelay: '450ms' }}>
+        <div
+          className="mt-16 bg-gradient-to-r from-pink-soft/30 to-blue-soft/30 p-8 rounded-lg animate-fade-up"
+          style={{ animationDelay: "450ms" }}
+        >
           <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-4">Prêt à travailler ensemble ?</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              Prêt à travailler ensemble ?
+            </h3>
             <p className="text-lg text-gray-600 mb-6">
-              Discutons de votre projet et de la façon dont nous pouvons vous aider à créer une présence web exceptionnelle.
+              Discutons de votre projet et de la façon dont nous pouvons vous
+              aider à créer une présence web exceptionnelle.
             </p>
-            <Button asChild size="lg" className="bg-pink-light hover:bg-blue-primary text-white transition-colors duration-300">
-              <a href="#contact">
-                Contactez-nous maintenant
-              </a>
+            <Button
+              asChild
+              size="lg"
+              className="bg-pink-light hover:bg-blue-primary text-white transition-colors duration-300"
+            >
+              <a href="#contact">Contactez-nous maintenant</a>
             </Button>
           </div>
         </div>
@@ -85,6 +106,5 @@ const Testimonials = () => {
     </section>
   );
 };
-
 
 export default Testimonials;

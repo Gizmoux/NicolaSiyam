@@ -1,6 +1,6 @@
 "use client";
-import React, { useState} from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,25 +14,29 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Mail, Phone } from "lucide-react";
-import { useToast } from '../hooks/use-toast';
+import { useToast } from "../hooks/use-toast";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Simulation d'envoi de formulaire
     toast({
       title: "Message envoyé !",
-      description: "Merci pour votre message. Nous vous répondrons  dans les plus brefs délais.",
+      description:
+        "Merci pour votre message. Nous vous répondrons  dans les plus brefs délais.",
     });
   };
 
   return (
-    <section id="contact" className="section bg-gradient-to-b from-blue-light/10 to-white">
+    <section
+      id="contact"
+      className="section bg-gradient-to-b from-blue-light/10 to-white"
+    >
       <div className="container-custom">
-        <motion.div 
+        <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,8 +45,8 @@ const Contact = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact</h2>
           <p className="text-lg text-gray-600">
-            Une idée de projet ? Une question ? N'hésitez pas à nous contacter, 
-            nous vous répondrons dans les plus brefs délais.
+            Une idée de projet ? Une question ? N&apos;hésitez pas à nous
+            contacter, nous vous répondrons dans les plus brefs délais.
           </p>
         </motion.div>
 
@@ -67,10 +71,15 @@ const Contact = () => {
                       <label htmlFor="email" className="text-sm font-medium">
                         Email
                       </label>
-                      <Input id="email" type="email" placeholder="votre@email.com" required />
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="votre@email.com"
+                        required
+                      />
                     </div>
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message
@@ -82,43 +91,54 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
-                  <Button type="submit" className="w-full bg-blue-primary hover:bg-blue-sky transition-colors">
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-blue-primary hover:bg-blue-sky transition-colors"
+                  >
                     Envoyer le message
                   </Button>
                 </form>
               </CardContent>
             </Card>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-semibold mb-4">Parlons de votre projet</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              Parlons de votre projet
+            </h3>
             <div className="space-y-6">
               <div className="flex items-center">
                 <div className="bg-blue-soft/30 p-3 rounded-full mr-4">
                   <Mail className="h-5 w-5 text-blue-primary" />
                 </div>
-                <a href="mailto:contact@studio-web.fr" className="text-gray-700 hover:text-pink-light transition-colors">
+                <a
+                  href="mailto:contact@studio-web.fr"
+                  className="text-gray-700 hover:text-pink-light transition-colors"
+                >
                   contact@ns-studio-web.fr
                 </a>
               </div>
-              
+
               <div className="flex items-center">
                 <div className="bg-pink-soft/30 p-3 rounded-full mr-4">
                   <Phone className="h-5 w-5 text-pink-light" />
                 </div>
-                <a href="tel:+33600000000" className="text-gray-700 hover:text-pink-light transition-colors">
+                <a
+                  href="tel:+33600000000"
+                  className="text-gray-700 hover:text-pink-light transition-colors"
+                >
                   +33 6 00 00 00 00
                 </a>
               </div>
             </div>
-            
+
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
                 <Button className="w-full mt-4 bg-gradient-to-r from-pink-light to-blue-primary text-white hover:opacity-90 transition-opacity">
@@ -130,7 +150,8 @@ const Contact = () => {
                   <DrawerHeader>
                     <DrawerTitle>Consultation gratuite</DrawerTitle>
                     <DrawerDescription>
-                      Réservez un appel de 30 minutes pour discuter de votre projet
+                      Réservez un appel de 30 minutes pour discuter de votre
+                      projet
                     </DrawerDescription>
                   </DrawerHeader>
                   <div className="p-4 pb-0">
@@ -139,12 +160,13 @@ const Contact = () => {
                       <Input placeholder="Votre email" type="email" />
                       <Input placeholder="Votre téléphone" type="tel" />
                       <Textarea placeholder="Détails de votre projet" />
-                      <Button 
+                      <Button
                         onClick={() => {
                           setIsOpen(false);
                           toast({
                             title: "Rendez-vous confirmé !",
-                            description: "Nous vous contacterons prochainement pour confirmer l'horaire.",
+                            description:
+                              "Nous vous contacterons prochainement pour confirmer l'horaire.",
                           });
                         }}
                       >
