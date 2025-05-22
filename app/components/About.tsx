@@ -28,7 +28,7 @@ const About = () => {
           <h2 className="title-gradient text-3xl md:text-4xl font-bold mb-8">À propos</h2>
           
           <p className="text-lg text-gray-600 mb-12">
-            Fondé en 2024, NS Studio Web est né d’une passion commune pour le web et le design. Nous concevons des sites et applications modernes, performants et sur mesure, avec une attention particulière portée à l’expérience utilisateur et aux dernières technologies comme Next.js.
+            Fondé en 2024, NS Studio Web est né d&apos;une passion commune pour le web et le design. Nous concevons des sites et applications modernes, performants et sur mesure, avec une attention particulière portée à l’expérience utilisateur et aux dernières technologies comme Next.js.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10">
             <motion.div 
@@ -48,7 +48,7 @@ const About = () => {
               <h3 className="text-xl font-semibold mb-2 text-blue-primary">Nicolas</h3>
               <p className="text-gray-600">
                 Développeur autodidacte, Nicolas complète notre approche par son sens du concret, 
-                sa curiosité constante et son attention à l'expérience utilisateur.
+                sa curiosité constante et son attention à l&apos;expérience utilisateur.
               </p>
             </motion.div>
             
@@ -68,7 +68,7 @@ const About = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2 text-pink-light">Siyam</h3>
               <p className="text-gray-600">
-                Diplômée d'Epitech, Siyam apporte une expertise technique solide et une vision globale des projets.
+                Diplômée d&apos;EPITECH, Siyam apporte une expertise technique solide et une vision globale des projets.
               </p>
             </motion.div>
           </div>
@@ -121,7 +121,7 @@ const About = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Expérience Utilisateur</h3>
                   <p className="text-gray-600">
-                    Conception centrée sur l'utilisateur pour une expérience fluide et intuitive.
+                    Conception centrée sur l&apos;utilisateur pour une expérience fluide et intuitive.
                   </p>
                 </div>
               </CardContent>
@@ -156,7 +156,7 @@ const About = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4">Notre parcours</h3>
               <p className="text-gray-600">
-                Forts de plusieurs années d’expérience, nous avons lancé NS Studio Web pour accompagner entreprises et entrepreneurs avec des solutions digitales élégantes et fonctionnelles, pensées pour vous démarquer et atteindre vos objectifs.
+                Forts de plusieurs années d&apos;expérience, nous avons lancé NS Studio Web pour accompagner entreprises et entrepreneurs avec des solutions digitales élégantes et fonctionnelles, pensées pour vous démarquer et atteindre vos objectifs.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -165,7 +165,7 @@ const About = () => {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <span className="block text-3xl font-bold text-blue-primary mb-2">5+</span>
-                <span className="text-sm text-gray-600">Années d'expérience</span>
+                <span className="text-sm text-gray-600">Années d&apos;expérience</span>
               </motion.div>
               <motion.div 
                 className="bg-pink-soft/20 p-6 rounded-[32px] text-center"

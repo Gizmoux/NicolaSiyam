@@ -62,7 +62,7 @@ export default function MentionsLegales() {
         <h2 className="text-xl font-semibold mb-2">Responsabilité</h2>
         <p>
           NS Studio Web met tout en œuvre pour fournir des informations fiables et à jour. Cependant, la responsabilité
-          de l’éditeur ne saurait être engagée en cas d’erreur ou d'omission.
+          de l&apos;éditeur ne saurait être engagée en cas d&apos;erreur ou d&apos;omission.
         </p>
       </section>
 

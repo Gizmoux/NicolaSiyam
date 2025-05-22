@@ -32,7 +32,7 @@ export default function PolitiqueConfidentialite() {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">Cookies</h2>
       <p className="mb-4">
-        Ce site utilise des cookies strictement nécessaires au bon fonctionnement du site. Aucun cookie de suivi ou publicitaire n'est utilisé.
+        Ce site utilise des cookies strictement nécessaires au bon fonctionnement du site. Aucun cookie de suivi ou publicitaire n&apos;est utilisé.
       </p>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">Droits des utilisateurs</h2>
