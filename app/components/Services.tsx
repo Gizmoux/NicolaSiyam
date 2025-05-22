@@ -10,28 +10,68 @@ const Services = () => {
     {
       title: "Site Vitrine",
       description:
-        "Présentez votre entreprise avec élégance grâce à un site web moderne et responsive, parfaitement optimisé pour le référencement.",
+        "Présentez votre entreprise avec élégance grâce à un site web moderne et responsive, composé de 1 à 3 pages. Idéal pour une présence en ligne simple, claire et efficace, avec un design personnalisé et une base SEO solide.",
       features: [
         "Design personnalisé",
         "Responsive design",
         "Optimisé SEO",
-        "Interface d'administration",
       ],
       accent: "bg-pink-light",
-      price: "À partir de 1500€",
+      price: "À partir de 450€",
     },
+    {
+      title: "Site Vitrine Pro",
+      description:
+        "Offrez à votre entreprise une vitrine digitale complète avec un site web professionnel de 4 à 8 pages. Parfait pour présenter vos services en détail, intégrer des sections dynamiques et renforcer votre visibilité grâce à un SEO avancé.",
+      features: [
+        "Design personnalisé",
+        "Responsive design",
+        "Optimisé SEO",
+      ],
+      accent: "bg-blue-soft",
+      price: "À partir de 800€",
+    },
+    {
+      title: "Site Vitrine Premium",
+      description:
+        "Une solution sur-mesure pour les entreprises ou indépendants souhaitant un site web complet, professionnel et évolutif. Jusqu'à 15 pages, fonctionnalités avancées (formulaires dynamiques, blog, intégrations externes), design hautement personnalisé et accompagnement stratégique.",
+      features: [
+        "Design sur-mesure",
+        "Responsive design",
+        "Optimisation SEO approfondie",
+        "Interface d'administration complète",
+        "Fonctionnalités personnalisées (blog, formulaires, intégrations)",
+        "Accompagnement stratégique & conseils UX"
+      ],
+      accent: "bg-pink-light",
+      price: "À partir de 2000€"
+    },    
     {
       title: "E-commerce",
       description:
-        "Vendez vos produits en ligne avec une boutique complète, incluant paiement sécurisé et gestion des commandes.",
+        "Lancez votre boutique en ligne avec une solution e-commerce complète, performante et sécurisée. Idéal pour vendre vos produits 24h/24, gérer vos commandes, vos stocks et offrir une expérience d’achat fluide à vos clients.",
       features: [
         "Catalogue produits",
         "Panier d'achat",
         "Paiement sécurisé",
         "Gestion des stocks",
+        "Responsive design & SEO"
       ],
       accent: "bg-blue-soft",
-      price: "À partir de 3000€",
+      price: "À partir de 3000€"
+    },    
+    {
+      title: "Refonte de site",
+      description:
+        "Donnez un nouveau souffle à votre site existant avec un design moderne et des performances améliorées.",
+      features: [
+        "Analyse de l'existant",
+        "Modernisation design",
+        "Optimisation performances",
+        "Migration de contenu",
+      ],
+      accent: "bg-pink-soft",
+      price: "Sur devis",
     },
     {
       title: "Application Web",
@@ -45,19 +85,6 @@ const Services = () => {
       ],
       accent: "bg-blue-primary",
       price: "Sur devis",
-    },
-    {
-      title: "Refonte de site",
-      description:
-        "Donnez un nouveau souffle à votre site existant avec un design moderne et des performances améliorées.",
-      features: [
-        "Analyse de l'existant",
-        "Modernisation design",
-        "Optimisation performances",
-        "Migration de contenu",
-      ],
-      accent: "bg-pink-soft",
-      price: "À partir de 1200€",
     },
   ];
 

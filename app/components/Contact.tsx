@@ -55,7 +55,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
-            <Card className="shadow-lg">
+            <Card className="shadow-lg rounded-[32px]">
               <CardContent className="pt-6">
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

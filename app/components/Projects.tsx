@@ -34,11 +34,11 @@ const Projects = () => {
       title: "AriMayi - Site Vitrine",
       category: "Site Vitrine",
       image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80",
+        "/img/arimayi.png",
       description:
         "Site vitrine élégant pour la société AriMayi, mettant en avant leurs services et valeurs avec un design épuré et moderne.",
       technologies: [
-        "React",
+        "NextJS",
         "Tailwind CSS",
         "Responsive Design",
         "Animations",
@@ -63,21 +63,37 @@ const Projects = () => {
     //   technologies: ["React", "Google Maps API", "Node.js", "Mobile First"],
     //   link: "#"
     // },
+    // {
+    //   id: 4,
+    //   title: "ArtFolio",
+    //   category: "Portfolio",
+    //   image:
+    //     "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80",
+    //   description:
+    //     "Portfolio artistique avec galerie d'images immersive et animations élégantes pour une expérience utilisateur unique.",
+    //   technologies: [
+    //     "React",
+    //     "GSAP Animations",
+    //     "Responsive Design",
+    //     "Lazy Loading",
+    //   ],
+    //   link: "#",
+    // },
     {
-      id: 4,
-      title: "ArtFolio",
-      category: "Portfolio",
+      id: 5,
+      title: "Nathan (Streamer & YouTubeur) - Site vitrine",
+      category: "Site Vitrine",
       image:
-        "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80",
+        "/img/nathan.png",
       description:
-        "Portfolio artistique avec galerie d'images immersive et animations élégantes pour une expérience utilisateur unique.",
+        "Création d’un site vitrine pour Nathan, streamer sur Twitch et créateur de contenu sur YouTube. Ce site a été conçu pour mettre en valeur son univers, centraliser ses contenus (lives, vidéos, planning), et renforcer sa présence en ligne. L’objectif était de proposer une interface moderne, responsive et facile à administrer.",
       technologies: [
-        "React",
-        "GSAP Animations",
+        "ReactJS",
+        "CSS",
+        "Firebase",
         "Responsive Design",
-        "Lazy Loading",
       ],
-      link: "#",
+      link: "https://nathan-nouailhac.firebaseapp.com/",
     },
   ];
 
@@ -156,6 +172,7 @@ const Projects = () => {
                   <motion.img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.7 }}

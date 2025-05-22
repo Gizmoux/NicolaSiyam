@@ -12,9 +12,19 @@ const Testimonials = () => {
       name: "AriMayi",
       role: "Organisme de formation",
       avatar:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80",
+        "/img/samir.jpg",
       quote:
         "Un travail exceptionnel pour notre site vitrine. Le design est exactement ce que nous recherchions - élégant, professionnel et représentant parfaitement notre identité. La collaboration a été fluide et agréable du début à la fin.",
+      rating: 5,
+    },
+    {
+      id: 2,
+      name: "Nathan",
+      role: "Streamer & Youtuber",
+      avatar:
+        "/img/nathou.webp",
+      quote:
+        "Un travail rapide, soigné et parfaitement adapté à mes besoins. Mon site vitrine reflète exactement mon identité de streamer. Merci !",
       rating: 5,
     },
   ];
