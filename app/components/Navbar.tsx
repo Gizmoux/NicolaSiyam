@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -87,8 +88,8 @@ const Navbar = () => {
       )}
     >
       <div className="container-custom flex justify-between items-center">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="font-playfair font-bold text-xl md:text-2xl z-[101]"
         >
           {isMobileMenuOpen ? (
@@ -96,7 +97,7 @@ const Navbar = () => {
           ) : (
             <span className="title-gradient">NS Studio Web</span>
           )}
-        </a>
+        </Link>
 
         {/* Navigation desktop */}
         <div className="hidden md:flex items-center space-x-6">
@@ -126,7 +127,7 @@ const Navbar = () => {
           </a>
           <Button
             asChild
-            className="text-sm border-pink-light text-pink-light hover:bg-pink-light hover:text-white transition-all duration-300"
+            className="text-sm outline border-pink-light text-pink-light hover:bg-pink-light hover:text-white transition-all duration-300"
           >
             <a href="#contact">Contact</a>
           </Button>

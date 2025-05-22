@@ -34,7 +34,7 @@ const Projects = () => {
       title: "AriMayi - Site Vitrine",
       category: "Site Vitrine",
       image:
-        "/img/arimayi.png",
+        "/img/arimayi.webp",
       description:
         "Site vitrine élégant pour la société AriMayi, mettant en avant leurs services et valeurs avec un design épuré et moderne.",
       technologies: [
@@ -84,7 +84,7 @@ const Projects = () => {
       title: "Nathan (Streamer & YouTubeur) - Site vitrine",
       category: "Site Vitrine",
       image:
-        "/img/nathan.png",
+        "/img/nathan.webp",
       description:
         "Création d’un site vitrine pour Nathan, streamer sur Twitch et créateur de contenu sur YouTube. Ce site a été conçu pour mettre en valeur son univers, centraliser ses contenus (lives, vidéos, planning), et renforcer sa présence en ligne. L’objectif était de proposer une interface moderne, responsive et facile à administrer.",
       technologies: [

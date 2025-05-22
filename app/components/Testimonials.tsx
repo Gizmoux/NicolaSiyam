@@ -12,7 +12,7 @@ const Testimonials = () => {
       name: "AriMayi",
       role: "Organisme de formation",
       avatar:
-        "/img/samir.jpg",
+        "/img/samir.webp",
       quote:
         "Un travail exceptionnel pour notre site vitrine. Le design est exactement ce que nous recherchions - élégant, professionnel et représentant parfaitement notre identité. La collaboration a été fluide et agréable du début à la fin.",
       rating: 5,

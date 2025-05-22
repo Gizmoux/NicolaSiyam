@@ -111,8 +111,6 @@ const Services = () => {
     },
     hover: {
       y: -10,
-      boxShadow:
-        "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
       transition: {
         type: "spring",
         stiffness: 300,
@@ -152,9 +150,9 @@ const Services = () => {
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants} whileHover="hover">
-              <Card className="rounded-[32px] overflow-hidden card-hover transition-all duration-500">
+              <Card className="rounded-[32px] overflow-hidden card-hover transition-all duration-500  h-full flex flex-col">
                 <div className={`h-2 ${service.accent}`}></div>
-                <CardContent className="pt-6">
+                <CardContent className="pt-6 flex-grow">
                   <h3 className="text-xl font-semibold mb-3">
                     {service.title}
                   </h3>

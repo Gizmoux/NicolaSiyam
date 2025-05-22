@@ -13,7 +13,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Send, CalendarCheck } from "lucide-react";
 
 const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,8 +92,9 @@ const Contact = () => {
 
                   <Button
                     type="submit"
-                    className="w-full bg-blue-primary hover:bg-blue-sky transition-colors"
+                    className="w-full bg-blue-primary hover:bg-blue-sky text-white flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
                   >
+                    <Send className="w-4 h-4" />
                     Envoyer le message
                   </Button>
                 </form>
@@ -117,10 +118,10 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-blue-primary" />
                 </div>
                 <a
-                  href="mailto:contact@studio-web.fr"
+                  href="mailto:contact.nstudioweb@gmail.com"
                   className="text-gray-700 hover:text-pink-light transition-colors"
                 >
-                  contact@ns-studio-web.fr
+                  contact.nstudioweb@gmail.com
                 </a>
               </div>
 
@@ -129,20 +130,21 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-pink-light" />
                 </div>
                 <a
-                  href="tel:+33600000000"
+                  href="tel:+336682461876"
                   className="text-gray-700 hover:text-pink-light transition-colors"
                 >
-                  +33 6 00 00 00 00
+                  +33 6 82 46 18 76
                 </a>
               </div>
             </div>
 
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
-              <DrawerTrigger asChild>
-                <Button className="w-full mt-4 bg-gradient-to-r from-pink-light to-blue-primary text-white hover:opacity-90 transition-opacity">
+              {/* <DrawerTrigger asChild>
+                <Button className="w-full mt-4 bg-gradient-to-r from-pink-light to-blue-primary text-white flex items-center justify-center gap-2 hover:opacity-90 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200">
+                  <CalendarCheck className="w-4 h-4" />
                   Prendre rendez-vous
                 </Button>
-              </DrawerTrigger>
+              </DrawerTrigger> */}
               <DrawerContent>
                 <div className="mx-auto w-full max-w-sm">
                   <DrawerHeader>

@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { Separator } from "@/components/ui/separator";
+import Link from 'next/link';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -87,8 +88,12 @@ const Footer = () => {
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
           <p>&copy; {currentYear} NS Studio Web. Tous droits réservés.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-blue-primary transition-colors">Mentions légales</a>
-            <a href="#" className="hover:text-blue-primary transition-colors">Politique de confidentialité</a>
+          <Link href="/mentions-legales" className="hover:text-blue-primary transition-colors">
+            Mentions légales
+          </Link>
+          <Link href="/confidentialite" className="hover:text-blue-primary transition-colors">
+            Politique de confidentialité
+          </Link>
           </div>
         </div>
       </div>
