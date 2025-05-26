@@ -65,7 +65,7 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                l'identité digitale
+                l&apos;identité digitale
               </motion.span>
               <motion.div 
                 className="absolute inset-0 bg-gradient-to-r from-cyan-medium/20 via-blue-bright/20 to-blue-electric/20 rounded-lg blur-sm -z-10"
