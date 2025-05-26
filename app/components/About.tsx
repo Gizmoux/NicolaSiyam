@@ -11,12 +11,13 @@ const About = () => {
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.6 }
+      transition: { duration: 0.7 }
     }
   };
 
   return (
-    <section id="about" className="section bg-gradient-to-b from-white to-blue-light/20">
+    // <section id="about" className="section bg-gradient-to-b from-white to-cyan-medium/20">
+    <section id="about" className="section bg-gradient-to-b from-navy-deep to-teal-dark/90">
       <div className="container-custom">
         <motion.div 
           className="text-center max-w-3xl mx-auto mb-16"
@@ -27,7 +28,7 @@ const About = () => {
         >
           <h2 className="title-gradient text-3xl md:text-4xl font-bold mb-8">À propos</h2>
           
-          <p className="text-lg text-gray-600 mb-12">
+          <p className="text-lg text-gray-400 mb-12">
             Fondé en 2024, NS Studio Web est né d&apos;une passion commune pour le web et le design. Nous concevons des sites et applications modernes, performants et sur mesure, avec une attention particulière portée à l’expérience utilisateur et aux dernières technologies comme Next.js.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-10">
@@ -45,8 +46,8 @@ const About = () => {
                   transition={{ duration: 0.5 }}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-primary">Nicolas</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 text-blue-bright">Nicolas</h3>
+              <p className="text-gray-400">
                 Développeur autodidacte, Nicolas complète notre approche par son sens du concret, 
                 sa curiosité constante et son attention à l&apos;expérience utilisateur.
               </p>
@@ -66,14 +67,14 @@ const About = () => {
                   transition={{ duration: 0.5 }}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-pink-light">Siyam</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-2 text-blue-bright">Siyam</h3>
+              <p className="text-gray-400">
                 Diplômée d&apos;EPITECH, Siyam apporte une expertise technique solide et une vision globale des projets.
               </p>
             </motion.div>
           </div>
           
-          {/* <p className="text-lg text-gray-600 mt-12">
+          {/* <p className="text-lg text-gray-400 mt-12">
             Ensemble, nous concevons des sites web et applications modernes, performants et sur mesure. 
             De la start-up à la grande entreprise, nous accompagnons chaque client avec transparence, 
             créativité et maîtrise des technologies de pointe comme Next.js. 
@@ -97,14 +98,14 @@ const About = () => {
           }}
         >
           <motion.div variants={fadeIn}>
-            <Card className="card-hover border-blue-soft border-2 rounded-[32px] h-full flex flex-col">
+            <Card className="card-hover border-teal-medium border-2 rounded-[32px] h-full flex flex-col">
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="bg-blue-soft/30 p-3 rounded-full mb-4">
+                  <div className="bg-teal-medium/30 p-3 rounded-full mb-4">
                     <Code className="h-6 w-6 text-blue-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Développement Web</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-400">
                     Création de sites web performants et responsifs avec les technologies les plus récentes.
                   </p>
                 </div>
@@ -113,14 +114,14 @@ const About = () => {
           </motion.div>
           
           <motion.div variants={fadeIn}>
-            <Card className="card-hover border-pink-soft border-2 rounded-[32px] h-full flex flex-col">
+            <Card className="card-hover border-teal-dark border-2 rounded-[32px] h-full flex flex-col">
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="bg-pink-soft/30 p-3 rounded-full mb-4">
+                  <div className="bg-teal-dark/30 p-3 rounded-full mb-4">
                     <Users className="h-6 w-6 text-pink-light" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Expérience Utilisateur</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-400">
                     Conception centrée sur l&apos;utilisateur pour une expérience fluide et intuitive.
                   </p>
                 </div>
@@ -129,14 +130,14 @@ const About = () => {
           </motion.div>
           
           <motion.div variants={fadeIn}>
-            <Card className="card-hover border-blue-sky border-2 rounded-[32px] h-full flex flex-col">
+            <Card className="card-hover border-teal-medium border-2 rounded-[32px] h-full flex flex-col">
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center text-center">
-                  <div className="bg-blue-sky/30 p-3 rounded-full mb-4">
+                  <div className="bg-teal-medium/30 p-3 rounded-full mb-4">
                     <Star className="h-6 w-6 text-blue-sky" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Qualité & Fiabilité</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-400">
                     Un travail soigné et rigoureux pour des projets livrés dans les délais avec un suivi personnalisé.
                   </p>
                 </div>
@@ -155,38 +156,38 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Notre parcours</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-400">
                 Forts de plusieurs années d&apos;expérience, nous avons lancé NS Studio Web pour accompagner entreprises et entrepreneurs avec des solutions digitales élégantes et fonctionnelles, pensées pour vous démarquer et atteindre vos objectifs.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <motion.div 
-                className="bg-blue-light/20 p-6 rounded-[32px] text-center"
+                className="bg-blue-bright/10 p-6 rounded-[32px] text-center"
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <span className="block text-3xl font-bold text-blue-primary mb-2">5+</span>
-                <span className="text-sm text-gray-600">Années d&apos;expérience</span>
+                <span className="text-sm text-gray-400">Années d&apos;expérience</span>
               </motion.div>
               <motion.div 
-                className="bg-pink-soft/20 p-6 rounded-[32px] text-center"
+                className="bg-teal-balanced/20 p-6 rounded-[32px] text-center"
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <span className="block text-3xl font-bold text-pink-light mb-2">5+</span>
-                <span className="text-sm text-gray-600">Projets réalisés</span>
+                <span className="text-sm text-gray-400">Projets réalisés</span>
               </motion.div>
               <motion.div 
-                className="bg-blue-sky/20 p-6 rounded-[32px] text-center"
+                className="bg-blue-electric/20 p-6 rounded-[32px] text-center"
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <span className="block text-3xl font-bold text-blue-sky mb-2">3+</span>
-                <span className="text-sm text-gray-600">Clients satisfaits</span>
+                <span className="text-sm text-gray-400">Clients satisfaits</span>
               </motion.div>
               <motion.div 
-                className="bg-blue-soft/20 p-6 rounded-[32px] text-center"
+                className="bg-cyan-medium/20 p-6 rounded-[32px] text-center"
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <span className="block text-3xl font-bold text-blue-soft mb-2">100%</span>
-                <span className="text-sm text-gray-600">Satisfaction client</span>
+                <span className="text-sm text-gray-400">Satisfaction client</span>
               </motion.div>
             </div>
           </div>

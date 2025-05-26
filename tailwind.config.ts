@@ -62,19 +62,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Nouvelle palette personnalisée
-				'pink-light': '#FFAFCA',
-				'pink-soft': '#FFC8DC',
-				'blue-light': '#DEE3FF',
-				'blue-soft': '#BDE0FE',
-				'blue-sky': '#A2D2FF',
-				'blue-primary': '#90C9FF',
+				'navy-deep': '#001f3f',
+				'teal-dark': '#005666',
+				'teal-medium': '#007179',
+				'teal-balanced': '#008c8c',
+				'cyan-medium': '#00a6c6',
+				'blue-bright': '#00b3e3',
+				'blue-electric': '#00bfff',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
-				'card': '32px', // Ajout du radius personnalisé à 32px
+				'card': '32px',
 			},
 			keyframes: {
 				'accordion-down': {

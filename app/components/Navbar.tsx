@@ -83,8 +83,8 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "py-2 bg-white/90 backdrop-blur-md shadow-sm"
-          : "py-4 bg-transparent"
+        ? "py-2 bg-white/90 backdrop-blur-md shadow-sm" 
+        : "py-4 bg-transparent"
       )}
     >
       <div className="container-custom flex justify-between items-center">
@@ -103,31 +103,31 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-6">
           <a
             href="#about"
-            className="text-sm hover:text-pink-light transition-colors"
+            className="text-sm text-teal-medium hover:text-blue-bright transition-colors"
           >
             À propos
           </a>
           <a
             href="#services"
-            className="text-sm hover:text-pink-light transition-colors"
+            className="text-sm text-teal-medium hover:text-blue-bright transition-colors"
           >
             Services
           </a>
           <a
             href="#projects"
-            className="text-sm hover:text-pink-light transition-colors"
+            className="text-sm text-teal-medium hover:text-blue-bright transition-colors"
           >
             Projets
           </a>
           <a
             href="#testimonials"
-            className="text-sm hover:text-pink-light transition-colors"
+            className="text-sm text-teal-medium hover:text-blue-bright transition-colors"
           >
             Témoignages
           </a>
           <Button
             asChild
-            className="text-sm outline border-pink-light text-pink-light hover:bg-pink-light hover:text-white transition-all duration-300"
+            className="text-sm border-2 border-teal-medium  bg-transparent text-teal-medium hover:bg-teal-medium hover:text-white transition-all duration-300"
           >
             <a href="#contact">Contact</a>
           </Button>
@@ -144,20 +144,20 @@ const Navbar = () => {
           <span
             className={`block w-6 h-0.5 transition-transform duration-300 ${
               isMobileMenuOpen
-                ? "rotate-45 translate-y-2 bg-pink-light"
-                : "bg-pink-light"
+                ? "rotate-45 translate-y-2 bg-teal-medium"
+                : "bg-teal-medium"
             }`}
           ></span>
           <span
-            className={`block w-6 h-0.5 bg-pink-light transition-opacity duration-300 ${
+            className={`block w-6 h-0.5 bg-teal-medium transition-opacity duration-300 ${
               isMobileMenuOpen ? "opacity-0" : "opacity-100"
             }`}
           ></span>
           <span
             className={`block w-6 h-0.5 transition-transform duration-300 ${
               isMobileMenuOpen
-                ? "-rotate-45 -translate-y-2 bg-pink-light"
-                : "bg-pink-light"
+                ? "-rotate-45 -translate-y-2 bg-teal-medium"
+                : "bg-teal-medium"
             }`}
           ></span>
         </button>
@@ -167,7 +167,7 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-gradient-to-br from-pink-light via-blue-soft to-blue-primary z-[99] flex items-center justify-center w-full h-screen"
+            className="fixed inset-0 bg-gradient-to-br from-teal-medium via-cyan-medium to-blue-electric z-[99] flex items-center justify-center w-full h-screen"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -217,7 +217,7 @@ const Navbar = () => {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="mt-4 px-8 py-3 bg-white text-pink-light rounded-full text-lg font-medium hover:scale-110 transition-transform"
+                className="mt-4 px-8 py-3 bg-white text-teal-medium rounded-full text-lg font-medium hover:scale-110 transition-transform"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variants={itemVariants}
               >

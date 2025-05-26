@@ -43,9 +43,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section
+    // <section
+    //   id="testimonials"
+    //   className="section bg-gradient-to-br from-cyan-medium/20 to-teal-balanced/30"
+    // >
+      <section
       id="testimonials"
-      className="section bg-gradient-to-br from-blue-light to-pink-soft/30"
+      className="section bg-gradient-to-b from-navy-deep/5 to-teal-balanced/30"
     >
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
@@ -63,7 +67,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={testimonial.id}
-              className="card-hover border-blue-soft/30 hover:border-pink-light/50 rounded-[32px] transition-all duration-500 animate-fade-up"
+              className="card-hover border-cyan-medium/30 hover:border-teal-medium/50 rounded-[32px] transition-all duration-500 animate-fade-up"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <CardContent className="pt-6">
@@ -92,7 +96,7 @@ const Testimonials = () => {
         </div>
 
         <div
-          className="mt-16 bg-gradient-to-r from-pink-soft/30 to-blue-soft/30 p-8 rounded-lg animate-fade-up"
+          className="mt-16 bg-gradient-to-r from-teal-balanced/30 to-cyan-medium/30 p-8 rounded-lg animate-fade-up"
           style={{ animationDelay: "450ms" }}
         >
           <div className="text-center">
@@ -106,7 +110,7 @@ const Testimonials = () => {
             <Button
               asChild
               size="lg"
-              className="bg-pink-light hover:bg-blue-primary text-white transition-colors duration-300"
+              className="bg-gradient-to-r from-teal-medium to-cyan-medium hover:from-cyan-medium hover:to-blue-bright text-white transition-colors duration-300"
             >
               <a href="#contact">Contactez-nous maintenant</a>
             </Button>

@@ -11,6 +11,23 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "NS Studio Web",
   description: "Conception de site webs en freelance",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/favicon.ico",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/favicon.ico",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.ico",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

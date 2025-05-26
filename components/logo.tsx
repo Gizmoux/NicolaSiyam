@@ -1,15 +1,15 @@
 import React from "react";
 import Image from "next/image";
-import logo from "@/public/logo.jpg";
+import logo from "@/app/favicon.ico";
 export const Logo = () => {
   return (
     <Image
       src={logo}
-      alt="NicolaSiyam Agency"
-      width={54}
-      height={54}
+      alt="Logo"
+      width={32}
+      height={32}
       priority
-      className="cursor-pointer w-auto h-auto rounded-full"
+      className="cursor-pointer"
     />
   );
 };

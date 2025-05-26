@@ -29,9 +29,13 @@ const Contact = () => {
   // };
 
   return (
-    <section
+    // <section
+    //   id="contact"
+    //   className="section bg-gradient-to-b from-blue-light/10 to-white"
+    // >
+      <section
       id="contact"
-      className="section bg-gradient-to-b from-blue-light/10 to-white"
+      className="section bg-gradient-to-b from-teal-balanced/30 to-teal-dark/90"
     >
       <div className="container-custom">
         <motion.div
@@ -63,7 +67,7 @@ const Contact = () => {
                       <label htmlFor="name" className="text-sm font-medium">
                         Nom
                       </label>
-                      <Input id="name" placeholder="Votre nom" required />
+                      <Input id="name" placeholder="Votre nom" required className="rounded-[32px]"/>
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
@@ -74,6 +78,7 @@ const Contact = () => {
                         type="email"
                         placeholder="votre@email.com"
                         required
+                        className="rounded-[32px]"
                       />
                     </div>
                   </div>
@@ -87,12 +92,13 @@ const Contact = () => {
                       placeholder="Décrivez votre projet ou votre demande..."
                       rows={4}
                       required
+                      className="resize-none rounded-[18px]"
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-blue-primary hover:bg-blue-sky text-white flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+                    className="w-full bg-gradient-to-r from-teal-medium to-cyan-medium hover:from-cyan-medium hover:to-blue-bright text-white flex items-center justify-center gap-2 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md rounded-[32px]"
                   >
                     <Send className="w-4 h-4" />
                     Envoyer le message

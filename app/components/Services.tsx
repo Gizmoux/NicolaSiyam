@@ -16,7 +16,7 @@ const Services = () => {
         "Responsive design",
         "Optimisé SEO",
       ],
-      accent: "bg-pink-light",
+      accent: "bg-teal-dark",
       price: "À partir de 450€",
     },
     {
@@ -28,7 +28,7 @@ const Services = () => {
         "Responsive design",
         "Optimisé SEO",
       ],
-      accent: "bg-blue-soft",
+      accent: "bg-blue-electric",
       price: "À partir de 800€",
     },
     {
@@ -43,7 +43,7 @@ const Services = () => {
         "Fonctionnalités personnalisées (blog, formulaires, intégrations)",
         "Accompagnement stratégique & conseils UX"
       ],
-      accent: "bg-pink-light",
+      accent: "bg-teal-dark",
       price: "À partir de 2000€"
     },    
     {
@@ -57,7 +57,7 @@ const Services = () => {
         "Gestion des stocks",
         "Responsive design & SEO"
       ],
-      accent: "bg-blue-soft",
+      accent: "bg-blue-electric",
       price: "À partir de 3000€"
     },    
     {
@@ -70,7 +70,7 @@ const Services = () => {
         "Optimisation performances",
         "Migration de contenu",
       ],
-      accent: "bg-pink-soft",
+      accent: "bg-teal-dark",
       price: "Sur devis",
     },
     {
@@ -83,7 +83,7 @@ const Services = () => {
         "Interface intuitive",
         "Sécurité renforcée",
       ],
-      accent: "bg-blue-primary",
+      accent: "bg-blue-electric",
       price: "Sur devis",
     },
   ];
@@ -120,9 +120,13 @@ const Services = () => {
   };
 
   return (
-    <section
+    // <section
+    //   id="services"
+    //   className="section bg-gradient-to-br from-white via-cyan-medium/10"
+    // >
+      <section
       id="services"
-      className="section bg-gradient-to-br from-white via-blue-light/10 to-pink-soft/10"
+      className="section bg-gradient-to-b from-teal-dark/90 via-teal-medium/70 to-cyan-medium/30"
     >
       <div className="container-custom">
         <motion.div
@@ -133,9 +137,9 @@ const Services = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 title-gradient">
-            Mes Services
+            Nos Services
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-400">
             Des solutions web adaptées à vos besoins spécifiques, avec un
             accompagnement personnalisé tout au long du projet.
           </p>
@@ -163,7 +167,7 @@ const Services = () => {
                         <svg
                           viewBox="0 0 20 20"
                           fill="currentColor"
-                          className="w-5 h-5 text-pink-light mr-2"
+                          className="w-5 h-5 text-teal-medium mr-2"
                         >
                           <path
                             fillRule="evenodd"
@@ -179,7 +183,7 @@ const Services = () => {
                 <CardFooter className="flex justify-between items-center border-t pt-4">
                   <div className="font-medium">{service.price}</div>
                   <Button
-                    className="text-pink-light border-pink-light hover:bg-pink-light hover:text-white transition-all duration-300"
+                    className="text-teal-medium border border-teal-medium hover:bg-teal-medium bg-white hover:text-white transition-all duration-300"
                     asChild
                   >
                     <a href="#contact">
@@ -200,11 +204,16 @@ const Services = () => {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Button
               asChild
               size="lg"
-              className="bg-pink-light hover:bg-blue-primary text-white transition-colors duration-300"
+              className="bg-teal-medium hover:bg-cyan-medium text-white transition-colors duration-300"
             >
               <a href="#contact">
                 Demander un devis personnalisé [GRATUIT]

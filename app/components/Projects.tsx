@@ -134,7 +134,8 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section bg-blue-light/10">
+    // <section id="projects" className="section bg-blue-light/10">
+      <section id="projects" className="section bg-gradient-to-b from-cyan-medium/30 via-blue-bright/10 to-navy-deep/5">
       <div className="container-custom">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
@@ -236,7 +237,7 @@ const Projects = () => {
                       {selectedProject.technologies.map((tech, index) => (
                         <motion.span
                           key={index}
-                          className="bg-blue-soft/30 text-blue-primary text-sm px-3 py-1 rounded-full"
+                          className="bg-blue-bright/30 text-black text-sm px-3 py-1 rounded-full"
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ delay: index * 0.1 }}
@@ -254,7 +255,7 @@ const Projects = () => {
                   >
                     <Button
                       asChild
-                      className="bg-blue-primary hover:bg-blue-sky"
+                      className=" bg-blue-bright hover:bg-teal-medium"
                     >
                       <a
                         href={selectedProject.link}

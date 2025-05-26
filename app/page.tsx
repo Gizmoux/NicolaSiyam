@@ -15,46 +15,46 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6 }}
-      >
+      > */}
         <About />
-      </motion.div>
-      <motion.div
+      {/* </motion.div> */}
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-      >
+      > */}
         <Services />
-      </motion.div>
-      <motion.div
+      {/* </motion.div> */}
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-      >
+      > */}
         <Projects />
-      </motion.div>
-      <motion.div
+      {/* </motion.div> */}
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-      >
+      > */}
         <Testimonials />
-      </motion.div>
-      <motion.div
+      {/* </motion.div> */}
+      {/* <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-      >
+      > */}
         <Contact />
-      </motion.div>
+      {/* </motion.div> */}
       <Footer />
     </div>
   );

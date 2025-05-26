@@ -7,14 +7,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-white pt-16 pb-8">
+    // <footer className="bg-white pt-16 pb-8">
+      <footer className="bg-gradient-to-b from-teal-dark/90 to-navy-deep pt-16 pb-8">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8">
           <div className="md:col-span-2">
             <h3 className="font-playfair font-bold text-xl mb-4">
               <span className="title-gradient">NS Studio Web</span>
             </h3>
-            <p className="text-gray-600 mb-4 max-w-md">
+            <p className="text-gray-400 mb-4 max-w-md">
               Conception et développement de sites web professionnels, 
               élégants et performants pour votre entreprise.
             </p>
@@ -41,43 +42,43 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4">Liens Rapides</h4>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-white">Liens Rapides</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-gray-600 hover:text-blue-primary transition-colors">À propos</a>
+                <a href="#about" className="text-gray-400 hover:text-blue-primary transition-colors">À propos</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-600 hover:text-blue-primary transition-colors">Services</a>
+                <a href="#services" className="text-gray-400 hover:text-blue-primary transition-colors">Services</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-600 hover:text-blue-primary transition-colors">Projets</a>
+                <a href="#projects" className="text-gray-400 hover:text-blue-primary transition-colors">Projets</a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-600 hover:text-blue-primary transition-colors">Témoignages</a>
+                <a href="#testimonials" className="text-gray-400 hover:text-blue-primary transition-colors">Témoignages</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-600 hover:text-blue-primary transition-colors">Contact</a>
+                <a href="#contact" className="text-gray-400 hover:text-blue-primary transition-colors">Contact</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4">Services</h4>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-white">Services</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#services" className="text-gray-600 hover:text-blue-primary transition-colors">Site Vitrine</a>
+                <a href="#services" className="text-gray-400 hover:text-blue-primary transition-colors">Site Vitrine</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-600 hover:text-blue-primary transition-colors">E-commerce</a>
+                <a href="#services" className="text-gray-400 hover:text-blue-primary transition-colors">E-commerce</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-600 hover:text-blue-primary transition-colors">Application Web</a>
+                <a href="#services" className="text-gray-400 hover:text-blue-primary transition-colors">Application Web</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-600 hover:text-blue-primary transition-colors">Refonte de Site</a>
+                <a href="#services" className="text-gray-400 hover:text-blue-primary transition-colors">Refonte de Site</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-600 hover:text-blue-primary transition-colors">SEO</a>
+                <a href="#services" className="text-gray-400 hover:text-blue-primary transition-colors">SEO</a>
               </li>
             </ul>
           </div>
