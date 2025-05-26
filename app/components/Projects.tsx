@@ -134,7 +134,6 @@ const Projects = () => {
   };
 
   return (
-    // <section id="projects" className="section bg-blue-light/10">
       <section id="projects" className="section bg-gradient-to-b from-cyan-medium/30 via-blue-bright/10 to-navy-deep/5">
       <div className="container-custom">
         <motion.div
@@ -199,7 +198,7 @@ const Projects = () => {
 
         {selectedProject && (
           <Dialog open={open} onOpenChange={setOpen}>
-            <DialogContent className="max-w-3xl rounded-card">
+            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto rounded-card">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
