@@ -120,10 +120,6 @@ const Services = () => {
   };
 
   return (
-    // <section
-    //   id="services"
-    //   className="section bg-gradient-to-br from-white via-cyan-medium/10"
-    // >
       <section
       id="services"
       className="section bg-gradient-to-b from-teal-dark/90 via-teal-medium/70 to-cyan-medium/30"
@@ -196,7 +192,15 @@ const Services = () => {
             </motion.div>
           ))}
         </motion.div>
-
+        <motion.div
+          className="mt-12 text-center text-gray-600 text-lg max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          Pour 30 €/mois, nous vous proposons un accompagnement complet : maintenance, support et hébergement de votre site, en toute sérénité.
+        </motion.div>
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}

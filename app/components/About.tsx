@@ -37,7 +37,7 @@ const About = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full border-4 border-blue-soft">
+              <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full border-4 border-cyan-medium">
                 <motion.img
                   src="/img/nicolas.webp"
                   alt="Nicolas"
@@ -46,7 +46,7 @@ const About = () => {
                   transition={{ duration: 0.5 }}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-blue-bright">Nicolas</h3>
+              <h3 className="text-xl font-semibold mb-2 text-cyan-medium">Nicolas</h3>
               <p className="text-gray-400">
                 Développeur autodidacte, Nicolas complète notre approche par son sens du concret, 
                 sa curiosité constante et son attention à l&apos;expérience utilisateur.
@@ -58,7 +58,7 @@ const About = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full border-4 border-pink-soft">
+              <div className="relative w-48 h-48 mb-4 overflow-hidden rounded-full border-4 border-blue-bright">
                 <motion.img
                   src="/img/siyam.webp"
                   alt="Siyam"
@@ -73,13 +73,6 @@ const About = () => {
               </p>
             </motion.div>
           </div>
-          
-          {/* <p className="text-lg text-gray-400 mt-12">
-            Ensemble, nous concevons des sites web et applications modernes, performants et sur mesure. 
-            De la start-up à la grande entreprise, nous accompagnons chaque client avec transparence, 
-            créativité et maîtrise des technologies de pointe comme Next.js. 
-            Notre mission : donner vie à vos idées et sublimer votre présence en ligne.
-          </p> */}
         </motion.div>
         
         <motion.div 
@@ -105,7 +98,7 @@ const About = () => {
                     <Code className="h-6 w-6 text-blue-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Développement Web</h3>
-                  <p className="text-gray-400">
+                  <p className="text-gray-500">
                     Création de sites web performants et responsifs avec les technologies les plus récentes.
                   </p>
                 </div>
@@ -121,7 +114,7 @@ const About = () => {
                     <Users className="h-6 w-6 text-pink-light" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Expérience Utilisateur</h3>
-                  <p className="text-gray-400">
+                  <p className="text-gray-500">
                     Conception centrée sur l&apos;utilisateur pour une expérience fluide et intuitive.
                   </p>
                 </div>
@@ -137,7 +130,7 @@ const About = () => {
                     <Star className="h-6 w-6 text-blue-sky" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Qualité & Fiabilité</h3>
-                  <p className="text-gray-400">
+                  <p className="text-gray-500">
                     Un travail soigné et rigoureux pour des projets livrés dans les délais avec un suivi personnalisé.
                   </p>
                 </div>
@@ -156,7 +149,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl font-semibold mb-4">Notre parcours</h3>
-              <p className="text-gray-400">
+              <p className="text-gray-500">
                 Forts de plusieurs années d&apos;expérience, nous avons lancé NS Studio Web pour accompagner entreprises et entrepreneurs avec des solutions digitales élégantes et fonctionnelles, pensées pour vous démarquer et atteindre vos objectifs.
               </p>
             </div>
