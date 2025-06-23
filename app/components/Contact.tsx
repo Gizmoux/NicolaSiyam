@@ -141,10 +141,10 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-blue-primary" />
                 </div>
                 <a
-                  href="mailto:contact.nstudioweb@gmail.com"
+                  href="mailto:contact@nstudioweb.fr"
                   className="text-gray-700 hover:text-pink-light transition-colors"
                 >
-                  contact.nstudioweb@gmail.com
+                  contact@nstudioweb.fr
                 </a>
               </div>
 
