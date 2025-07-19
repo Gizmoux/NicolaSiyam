@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -93,9 +94,11 @@ const Navbar = () => {
           className="font-playfair font-bold text-xl md:text-2xl z-[101]"
         >
           {isMobileMenuOpen ? (
-            <span className="text-white">NS Studio Web</span>
+            // <span className="text-white">NS Studio Web</span>
+          <Image src="/logo/Logo_NS_800px.svg" alt="NS Studio Web" width={100} height={100} />
           ) : (
-            <span className="title-gradient">NS Studio Web</span>
+              // <span className="title-gradient">NS Studio Web</span>
+              <Image src="/logo/Logo_NS_400px.svg" alt="NS Studio Web" width={100} height={100} />
           )}
         </Link>
 
