@@ -95,6 +95,23 @@ const Projects = () => {
       ],
       link: "https://nathan-nouailhac.firebaseapp.com/",
     },
+    {
+      id: 6,
+      title: "AccessTicket",
+      category: "Application Web",
+      image:
+        "/img/dashboard-accessticket.webp",
+      description:
+        "Création d’une application web pour la gestion des tickets d’accès à un événement via un lecteur de QR code. Ce dashboard a été conçu pour permettre aux organisateurs de gérer les entrées des participants, de suivre l’état des tickets et de générer des rapports.",
+      technologies: [
+        "NextJS",
+        "Tailwind CSS",
+        "Responsive Design",
+        "Animations",
+        "PWA",
+      ],
+      link: "https://access-ticket.vercel.app/",
+    },
   ];
 
   const containerVariants = {

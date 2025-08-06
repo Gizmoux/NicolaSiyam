@@ -27,6 +27,16 @@ const Testimonials = () => {
         "Un travail rapide, soigné et parfaitement adapté à mes besoins. Mon site vitrine reflète exactement mon identité de streamer. Merci !",
       rating: 5,
     },
+    {
+      id: 3,
+      name: "Ounkache",
+      role: "Producteur de musique et organisateur d'évènements musicaux",
+      avatar:
+        "/img/black.webp",
+      quote:
+        "J'avais besoin d'une application qui me permettent de scanner les QR code des participants à mes évènements musicaux. L'application est simple à utiliser et le back-office web avec les statistiques et les rapports sont très pratiques.",
+      rating: 5,
+    },
   ];
 
   const renderStars = (rating: number) => {
@@ -43,11 +53,7 @@ const Testimonials = () => {
   };
 
   return (
-    // <section
-    //   id="testimonials"
-    //   className="section bg-gradient-to-br from-cyan-medium/20 to-teal-balanced/30"
-    // >
-      <section
+    <section
       id="testimonials"
       className="section bg-gradient-to-b from-navy-deep/5 to-teal-balanced/30"
     >
