@@ -110,7 +110,7 @@ const Projects = () => {
         "Animations",
         "PWA",
       ],
-      link: "https://access-ticket.vercel.app/",
+      link: "#",
     },
   ];
 
