@@ -269,19 +269,28 @@ const Projects = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Button
-                      asChild
-                      className=" bg-blue-bright hover:bg-teal-medium"
-                    >
-                      <a
-                        href={selectedProject.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center"
+                    {selectedProject.link && selectedProject.link !== "#" ? (
+                      <Button
+                        asChild
+                        className=" bg-blue-bright hover:bg-teal-medium"
                       >
-                        Visiter le site <Link className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
+                        <a
+                          href={selectedProject.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center"
+                        >
+                          Visiter le site <Link className="ml-2 h-4 w-4" />
+                        </a>
+                      </Button>
+                    ) : (
+                      <Button
+                        className="bg-gray-400 hover:bg-gray-500 cursor-not-allowed"
+                        disabled
+                      >
+                        Lien non publié
+                      </Button>
+                    )}
                   </motion.div>
                 </DialogFooter>
               </motion.div>
