@@ -37,9 +37,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.className} w-full overflow-x-hidden`}>
         <Toaster position="top-center" reverseOrder={false} />
-        {children}
+        <div className="w-full min-h-screen">
+          {children}
+        </div>
       </body>
     </html>
   );

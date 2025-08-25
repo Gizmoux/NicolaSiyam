@@ -18,23 +18,45 @@ interface Project {
   id: number;
   title: string;
   category: string;
-  image: string;
+  images: string[]; // Changé de 'image' à 'images' pour supporter plusieurs images
   description: string;
   technologies: string[];
   link: string;
 }
 
+// Fonction pour obtenir la couleur du badge selon la catégorie (correspondant aux services)
+const getCategoryColor = (category: string) => {
+  switch (category.toLowerCase()) {
+    case "site vitrine":
+      return "bg-cyan-medium/80 text-white"; // Service de base - bleu cyan clair
+    case "site vitrine pro":
+      return "bg-blue-bright/80 text-white"; // Service intermédiaire - bleu vif
+    case "site vitrine premium":
+      return "bg-teal-dark/80 text-white"; // Service premium - vert foncé
+    case "e-commerce":
+      return "bg-blue-electric/80 text-white"; // Service spécialisé - bleu électrique
+    case "refonte de site":
+      return "bg-teal-medium/80 text-white"; // Service de transformation - teal moyen
+    case "application web":
+      return "bg-navy-deep/80 text-white"; // Service sur mesure - bleu marine
+    default:
+      return "bg-gray-600/80 text-white";
+  }
+};
+
 const Projects = () => {
   const [open, setOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projects = [
     {
       id: 1,
       title: "AriMayi - Site Vitrine",
       category: "Site Vitrine",
-      image:
+      images: [
         "/img/arimayi.webp",
+      ],
       description:
         "Site vitrine élégant pour la société AriMayi, mettant en avant leurs services et valeurs avec un design épuré et moderne.",
       technologies: [
@@ -83,8 +105,9 @@ const Projects = () => {
       id: 5,
       title: "Nathan (Streamer & YouTubeur) - Site vitrine",
       category: "Site Vitrine",
-      image:
+      images: [
         "/img/nathan.webp",
+      ],
       description:
         "Création d’un site vitrine pour Nathan, streamer sur Twitch et créateur de contenu sur YouTube. Ce site a été conçu pour mettre en valeur son univers, centraliser ses contenus (lives, vidéos, planning), et renforcer sa présence en ligne. L’objectif était de proposer une interface moderne, responsive et facile à administrer.",
       technologies: [
@@ -99,8 +122,9 @@ const Projects = () => {
       id: 6,
       title: "AccessTicket",
       category: "Application Web",
-      image:
+      images: [
         "/img/dashboard-accessticket.webp",
+      ],
       description:
         "Création d’une application web pour la gestion des tickets d’accès à un événement via un lecteur de QR code. Ce dashboard a été conçu pour permettre aux organisateurs de gérer les entrées des participants, de suivre l’état des tickets et de générer des rapports.",
       technologies: [
@@ -111,7 +135,24 @@ const Projects = () => {
         "PWA",
       ],
       link: "#",
-    },
+      },
+      {
+        id: 7,
+        title: "Better Be Wild",
+        category: "Site Vitrine Premium",
+        images: [
+          "/img/bbw.webp", "/img/bbw-backoffice.webp",
+        ],
+        description:
+          "Création d'un site vitrine pour la marque Better Be Wild, mettant en avant leurs travaux et services avec un design épuré et moderne. Une interface administrateur a été créé pour gérer les contenus du site.",
+        technologies: [
+          "NextJS",
+          "Tailwind CSS",
+          "Responsive Design",
+          "Animations",
+        ],
+        link: "https://www.betterbewild.fr/",
+      },
   ];
 
   const containerVariants = {
@@ -147,11 +188,12 @@ const Projects = () => {
 
   const openProjectDetails = (project: Project) => {
     setSelectedProject(project);
+    setCurrentImageIndex(0); // Reset to first image
     setOpen(true);
   };
 
   return (
-      <section id="projects" className="section bg-gradient-to-b from-cyan-medium/30 via-blue-bright/10 to-navy-deep/5">
+    <section id="projects" className="section bg-gradient-to-b from-cyan-medium/30 via-blue-bright/10 to-navy-deep/5">
       <div className="container-custom">
         <motion.div
           className="text-center max-w-3xl mx-auto mb-16"
@@ -187,7 +229,7 @@ const Projects = () => {
               <Card className="overflow-hidden cursor-pointer rounded-[32px]">
                 <div className="relative h-60 overflow-hidden rounded-t-card">
                   <motion.img
-                    src={project.image}
+                    src={project.images[0]}
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-full object-cover"
@@ -195,7 +237,7 @@ const Projects = () => {
                     transition={{ duration: 0.7 }}
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-blue-primary/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
+                    <span className={`${getCategoryColor(project.category)} backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full`}>
                       {project.category}
                     </span>
                   </div>
@@ -225,16 +267,76 @@ const Projects = () => {
                   <DialogTitle className="text-2xl font-semibold">
                     {selectedProject.title}
                   </DialogTitle>
-                  <DialogDescription className="text-blue-primary font-medium mt-1">
-                    {selectedProject.category}
+                  <DialogDescription className="mt-1">
+                    <span className={`${getCategoryColor(selectedProject.category)} backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full font-medium`}>
+                      {selectedProject.category}
+                    </span>
                   </DialogDescription>
                 </DialogHeader>
                 <div className="mt-4">
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full h-64 object-cover rounded-card"
-                  />
+                  {selectedProject.images.length === 1 ? (
+                    <img
+                      src={selectedProject.images[0]}
+                      alt={selectedProject.title}
+                      className="w-full h-64 object-cover rounded-card"
+                    />
+                  ) : (
+                    <div className="relative overflow-hidden rounded-card">
+                      <motion.div
+                        key={currentImageIndex}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -100 }}
+                        transition={{ 
+                          type: "spring", 
+                          stiffness: 300, 
+                          damping: 30,
+                          duration: 0.5 
+                        }}
+                        className="w-full h-64"
+                      >
+                        <img
+                          src={selectedProject.images[currentImageIndex]}
+                          alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.div>
+                      {/* Navigation buttons */}
+                      <button
+                        onClick={() => setCurrentImageIndex(prev => prev === 0 ? selectedProject.images.length - 1 : prev - 1)}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110"
+                        aria-label="Image précédente"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+                      <button
+                        onClick={() => setCurrentImageIndex(prev => prev === selectedProject.images.length - 1 ? 0 : prev + 1)}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110"
+                        aria-label="Image suivante"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                      {/* Dots indicator */}
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                        {selectedProject.images.map((_, index) => (
+                          <motion.button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                            }`}
+                            aria-label={`Aller à l'image ${index + 1}`}
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.9 }}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   <div className="mt-4">
                     <h4 className="font-semibold mb-2">Description</h4>
                     <p className="text-gray-600 mb-4">
@@ -272,7 +374,7 @@ const Projects = () => {
                     {selectedProject.link && selectedProject.link !== "#" ? (
                       <Button
                         asChild
-                        className=" bg-blue-bright hover:bg-teal-medium"
+                        className=" bg-blue-bright hover:bg-teal-medium rounded-[32px]"
                       >
                         <a
                           href={selectedProject.link}
@@ -285,10 +387,10 @@ const Projects = () => {
                       </Button>
                     ) : (
                       <Button
-                        className="bg-gray-400 hover:bg-gray-500 cursor-not-allowed"
+                        className="bg-gray-400 hover:bg-gray-500 cursor-not-allowed rounded-[32px]"
                         disabled
                       >
-                        Lien non publié
+                        Lien non public
                       </Button>
                     )}
                   </motion.div>

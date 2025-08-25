@@ -122,7 +122,7 @@ const Services = () => {
   return (
       <section
       id="services"
-      className="section bg-gradient-to-b from-teal-dark/90 via-teal-medium/70 to-cyan-medium/30"
+      className="section bg-gradient-to-b from-teal-dark/90 via-teal-medium/70 to-cyan-medium/30 w-full overflow-hidden"
     >
       <div className="container-custom">
         <motion.div
@@ -202,7 +202,7 @@ const Services = () => {
           Pour 30 €/mois, nous vous proposons un accompagnement complet : maintenance, support et hébergement de votre site, en toute sérénité.
         </motion.div>
         <motion.div
-          className="mt-16 text-center"
+          className="mt-16 text-center w-full max-w-full px-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
@@ -217,11 +217,11 @@ const Services = () => {
             <Button
               asChild
               size="lg"
-              className="bg-teal-medium hover:bg-cyan-medium text-white transition-colors duration-300"
+              className="bg-teal-medium hover:bg-cyan-medium text-white transition-colors duration-300 px-6 py-4 text-sm md:text-base whitespace-normal break-words"
             >
-              <a href="#contact">
+              <a href="#contact" className="text-center">
                 Demander un devis personnalisé [GRATUIT]
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
               </a>
             </Button>
           </motion.div>
