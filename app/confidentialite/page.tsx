@@ -37,7 +37,7 @@ export default function PolitiqueConfidentialite() {
 
       <h2 className="text-xl font-semibold mt-6 mb-2">Droits des utilisateurs</h2>
       <p className="mb-4">
-        Vous pouvez accéder, modifier ou supprimer vos données personnelles à tout moment en envoyant un email à : <a href="mailto:contact@exemple.com" className="text-blue-600 underline">contact@exemple.com</a>.
+        Vous pouvez accéder, modifier ou supprimer vos données personnelles à tout moment en envoyant un email à : <a href="mailto:contact@nstudioweb.fr" className="text-blue-600 underline">contact@nstudioweb.fr</a>.
       </p>
 
       <p className="text-sm text-gray-500 mt-8">Dernière mise à jour : 22/05/2025</p>
