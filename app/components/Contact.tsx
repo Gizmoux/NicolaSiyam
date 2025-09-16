@@ -142,7 +142,7 @@ const Contact = () => {
                 </div>
                 <a
                   href="mailto:contact@nstudioweb.fr"
-                  className="text-gray-700 hover:text-pink-light transition-colors"
+                  className="text-gray-900 hover:text-pink-light transition-colors"
                 >
                   contact@nstudioweb.fr
                 </a>
@@ -153,8 +153,8 @@ const Contact = () => {
                   <Phone className="h-5 w-5 text-pink-light" />
                 </div>
                 <a
-                  href="tel:+336682461876"
-                  className="text-gray-700 hover:text-pink-light transition-colors"
+                  href="tel:+33682461876"
+                  className="text-gray-900 hover:text-pink-light transition-colors"
                 >
                   +33 6 82 46 18 76
                 </a>
