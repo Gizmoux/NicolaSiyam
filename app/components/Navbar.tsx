@@ -20,6 +20,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -93,13 +94,7 @@ const Navbar = () => {
           href="/"
           className="font-playfair font-bold text-xl md:text-2xl z-[101]"
         >
-          {isMobileMenuOpen ? (
-            // <span className="text-white">NS Studio Web</span>
-          <Image src="/logo/Logo_NS_800px.svg" alt="NS Studio Web" width={100} height={100} />
-          ) : (
-              // <span className="title-gradient">NS Studio Web</span>
-              <Image src="/logo/Logo_NS_400px.svg" alt="NS Studio Web" width={100} height={100} />
-          )}
+          <Image src={isScrolled ? "/logo/Logo_NS_400px.svg" : "/logo/logo-white.png"} alt="NS Studio Web" width={100} height={100} />
         </Link>
 
         {/* Navigation desktop */}
