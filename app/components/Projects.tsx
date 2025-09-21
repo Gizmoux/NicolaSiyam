@@ -153,6 +153,23 @@ const Projects = () => {
         ],
         link: "https://www.betterbewild.fr/",
       },
+      {
+        id: 8,
+        title: "STORY DEM - Site Vitrine",
+        category: "Site Vitrine",
+        images: [
+          "/img/story-dem.webp",
+        ],
+        description:
+          "Création d'un site vitrine pour la société STORY DEM, mettant en avant leurs travaux et services avec un design épuré et moderne.",
+        technologies: [
+          "NextJS",
+          "Tailwind CSS",
+          "Responsive Design",
+          "Animations",
+        ],
+        link: "https://story-dem-website.vercel.app",
+      }
   ];
 
   const containerVariants = {
